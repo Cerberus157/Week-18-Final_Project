@@ -1,0 +1,134 @@
+[
+	{
+		"name": "Create User Profile",
+		"method": "POST",
+		"url": "http://localhost:8080/numerology_calendar/users",
+		"headers": [
+			{
+				"name": "Content-Type",
+				"value": "application/json"
+			}
+		],
+		"payload": {
+			"fullName": "Evelyn Rose",
+			"birthDate": "1988-04-12"
+		}
+	},
+	{
+		"name": "Generate Numerology Calendar",
+		"method": "GET",
+		"url": "http://localhost:8080/numerology_calendar/1/2025",
+		"headers": [
+		]
+	},
+	{
+		"name": "Get Compatibility Label",
+		"method": "GET",
+		"url": "http://localhost:8080/numerology_calendar/compatibility/6/7",
+		"headers": [
+		]
+	},
+	{
+		"name": "Export Calendar CSV",
+		"method": "GET",
+		"url": "http://localhost:8080/numerology_calendar/1/2025/export",
+		"headers": [
+		]
+	},
+	{
+		"name": "Create Calendar Day",
+		"method": "POST",
+		"url": "http://localhost:8080/numerology_calendar/day",
+		"headers": [
+			{
+				"name": "Content-Type",
+				"value": "application/json"
+			}
+		],
+		"payload": {
+			"date": "2026-01-01",
+			"calendarDayNumber": 9,
+			"userProfile": {
+				"userId": 1
+			}
+		}
+	},
+	{
+		"name": "Get Compatibility Matrix",
+		"method": "GET",
+		"url": "http://localhost:8080/numerology_calendar/matrix",
+		"headers": [
+		]
+	},
+	{
+		"name": "Add Compatibility Matrix Entry",
+		"method": "POST",
+		"url": "http://localhost:8080/numerology_calendar/matrix",
+		"headers": [
+			{
+				"name": "Content-Type",
+				"value": "application/json"
+			}
+		],
+		"payload": {
+			"lifepathNumber": 0,
+			"calendarDayNumber": 1,
+			"compatibilityLabel": {
+				"labelId": 1
+			}
+		}
+	},
+	{
+		"name": "Delete Matrix Entry",
+		"method": "DELETE",
+		"url": "http://localhost:8080/numerology_calendar/matrix/302",
+		"headers": [
+		]
+	},
+	{
+		"name": "Create Compatibility Label",
+		"method": "POST",
+		"url": "http://localhost:8080/numerology_calendar/label",
+		"headers": [
+			{
+				"name": "Content-Type",
+				"value": "application/json"
+			}
+		],
+		"payload": {
+			"matchType": "Test Label",
+			"title": "Testing",
+			"description": "This is a test."
+		}
+	},
+	{
+		"name": "Update Compatibility Label",
+		"method": "PUT",
+		"url": "http://localhost:8080/numerology_calendar/label/403",
+		"headers": [
+			{
+				"name": "Content-Type",
+				"value": "application/json"
+			}
+		],
+		"payload": {
+			"matchType": "Growth Opportunity",
+			"title": "Slow Build, Steady Wins",
+			"description": "Practical energy with patience yields long-term rewards."
+		}
+	},
+	{
+		"name": "Get Compatibility Label by ID",
+		"method": "GET",
+		"url": "http://localhost:8080/numerology_calendar/label/7",
+		"headers": [
+		]
+	},
+	{
+		"name": "Delete Compatibility Label",
+		"method": "DELETE",
+		"url": "http://localhost:8080/numerology_calendar/label/7",
+		"headers": [
+		]
+	}
+]
